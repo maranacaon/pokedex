@@ -1,4 +1,4 @@
-import { PokemonListContainer, Title } from './Style';
+import { PokemonListContainer, Title, MainContainer } from './Style';
 import { useEffect }  from 'react';
 import PokemonCard from '../../components/PokemonCard/PokemonCard';
 import { useSelector, useDispatch } from 'react-redux';
@@ -34,8 +34,8 @@ function PokemonList() {
   
   console.log(pokemons)
     return (
-      <>
-        <Title>Pokedex</Title>
+      <MainContainer>
+        <Title>Pokédex</Title>
         <PokemonListContainer>
           {pokemons.map(pokemon => 
               <PokemonCard
@@ -44,11 +44,11 @@ function PokemonList() {
               id={pokemon.data.id}
               image={pokemon.data.sprites.other.dream_world.front_default}
               type={pokemon.data.types[0].type.name}
-              pokemon={pokemon.data}
+              pokemon={pokemon}
               />
           )}
         </PokemonListContainer>
-      </>
+      </MainContainer>
     );
   }
   

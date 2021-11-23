@@ -35,14 +35,14 @@ export const PokemonContainer = styled.div`
         width: 150px;
         text-decoration: none;
         text-align: center;
-        color: #C766D9;
-        border: 1px solid #C766D9;
+        color: #819AF0;
+        border: 1px solid #819AF0;
         padding: 0.5rem;
         border-radius: 8px;
         font-size: 14px;
 
         :hover {
-            background-color: #C766D9;
+            background-color: #819AF0;
             color: white;
         }
     }

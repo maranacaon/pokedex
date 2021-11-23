@@ -5,6 +5,8 @@ export const MainContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: #819AF0;
+    height: 100vh;
     
     h1 {
         text-align: center;
@@ -20,14 +22,14 @@ export const MainContainer = styled.div`
         width: 100px;
         text-decoration: none;
         text-align: center;
-        color: #C766D9;
-        border: 1px solid #C766D9;
+        color: #819AF0;
+        border: 1px solid #819AF0;
         padding: 10px;
         border-radius: 8px;
         font-size: 18px;
 
         :hover {
-            background-color: #C766D9;
+            background-color: #819AF0;
             color: white;
         }
     }
@@ -41,7 +43,7 @@ export const PokemonContainer = styled.div`
     border-radius: 8px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
     padding: 2rem;
-    margin-top: 3rem;
+    background-color: #FAEFAF;
 `;
 
 export const LeftContainer = styled.div`
