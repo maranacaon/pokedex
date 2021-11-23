@@ -22,11 +22,27 @@ export const PokemonContainer = styled.div`
     50%{transform: rotate(2deg);}
     75%{transform: rotate(-2deg);}
     100%{transform: rotate(0deg);}
-}
+    }
 
     img {
         width: 120px;
         height: 120px;
+    }
+
+    a {
+        width: 150px;
+        text-decoration: none;
+        text-align: center;
+        color: #C766D9;
+        border: 1px solid #C766D9;
+        padding: 0.5rem;
+        border-radius: 8px;
+        font-size: 14px;
+
+        :hover {
+            background-color: #C766D9;
+            color: white;
+        }
     }
 `
 

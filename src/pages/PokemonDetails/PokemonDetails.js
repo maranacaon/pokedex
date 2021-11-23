@@ -3,7 +3,7 @@
 // import { getPokemonDetails } from "../../redux/actions/pokemonActions";
 // import StatsChart from '../../components/StatsChart/StatsChart';
 import { MainContainer, PokemonContainer, LeftContainer, RightContainer,
-StatsChartContainer } from './Style';
+StatsChartContainer, Infos } from './Style';
 import StatsChart from '../../components/StatsChart/StatsChart';
 import {Link} from 'react-router-dom';
 
@@ -31,7 +31,7 @@ function PokemonDetails({ match }) {
             <StatsChartContainer>
               <StatsChart/>
             </StatsChartContainer>
-            <div>
+            <Infos>
               <div className="type">
                 <h4>Type: </h4>
                 <p>Eletric</p>
@@ -44,16 +44,14 @@ function PokemonDetails({ match }) {
                 <h4>Weight:</h4>
                 <p>6</p>
               </div>
-            </div>
-            <div>
               <div className="abilities">
-                <h3>Abilities:</h3>
+                <h4>Abilities:</h4>
                 <ul>
                   <li>Static</li>
                   <li>Lightning-rod</li>
                 </ul>
               </div>
-            </div>
+            </Infos>
           </RightContainer>
           <Link to={`/`}>Voltar</Link>
         </PokemonContainer>
