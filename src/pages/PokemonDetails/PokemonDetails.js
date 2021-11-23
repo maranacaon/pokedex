@@ -1,23 +1,30 @@
 // import { useEffect } from 'react';
+// import axios from 'axios';
 // import { useDispatch, useSelector } from 'react-redux';
-// import { getPokemonDetails } from "../../redux/actions/pokemonActions";
-// import StatsChart from '../../components/StatsChart/StatsChart';
+// import { selectedPokemon } from "../../redux/actions/pokemonActions";
+// import { useParams } from "react-router-dom";
 import { MainContainer, PokemonContainer, LeftContainer, RightContainer,
 StatsChartContainer, Infos } from './Style';
 import StatsChart from '../../components/StatsChart/StatsChart';
 import {Link} from 'react-router-dom';
 
-function PokemonDetails({ match }) {
+function PokemonDetails() {
+  // const { id } = useParams();
+  // let pokemon = useSelector((state) => state.getSelectedPokemon);
+  // const {sprites, stats, types, name, weight, height, abilities } = pokemon;
   // const dispatch = useDispatch();
-
-  //   const pokemonDetails = useSelector((state) => state.getPokemonDetails);
-  //   const {loading, error, pokemon} = pokemonDetails;
-
-  //   useEffect(() => {
-  //       if(pokemon && match.params.id !== pokemon.id) {
-  //           dispatch(getPokemonDetails(match.params.id))
-  //       }
-  //   }, [dispatch, pokemon, match])
+  
+  // useEffect(() => {
+  //   const fetchPokemonDetail = async (id) => {
+  //   const response = await axios
+  //     .get(`https://pokeapi.co/api/v2/pokemon/${id}`)
+  //     .catch((err) => {
+  //       console.log("Err: ", err);
+  //     });
+  //   dispatch(selectedPokemon(response.data));
+  // };
+  //   if (id && id !== "") fetchPokemonDetail(id);
+  // }, [id, dispatch]);
 
     return (
       <>
@@ -61,14 +68,3 @@ function PokemonDetails({ match }) {
   }
   
   export default PokemonDetails;
-
-  // {loading ? (
-  //         <h2>Loading...</h2>
-  //     ) : error ? (
-  //         <h2>{error}</h2>
-  //     ) : (
-  //       <div>
-  //         <img src={pokemon.image} alt={pokemon.name}/>
-  //         <p>{pokemon.name}</p>    
-  //       </div>
-  //     )} 

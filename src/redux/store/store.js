@@ -1,11 +1,11 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import { getPokemonsListReducer, getPokemonDetailsReducer } from '../reducers/reducers';
+import { getPokemonsListReducer, getSelectedPokemonReducer } from '../reducers/reducers';
 
 const rootReducer = combineReducers({
     getPokemonsList: getPokemonsListReducer,
-    getPokemonDetails: getPokemonDetailsReducer
+    getSelectedPokemon: getSelectedPokemonReducer,
 });
 
 const middleware = [thunk];

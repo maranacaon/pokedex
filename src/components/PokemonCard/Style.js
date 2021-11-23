@@ -2,14 +2,16 @@ import styled from 'styled-components';
 
 export const PokemonContainer = styled.div`
     display: flex;
+    gap: 1rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 230px;
-    padding: 20px;
     border-radius: 5px;
-    height: 250px;
+    height: 300px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    padding: 3rem;
+    background-color: #FAEFAF;
 
     :hover {
         animation: shake 1s;
@@ -25,8 +27,8 @@ export const PokemonContainer = styled.div`
     }
 
     img {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
     }
 
     a {
@@ -48,7 +50,6 @@ export const PokemonContainer = styled.div`
 
 export const Name = styled.h1 `
     text-transform: capitalize;
-    margin-top: 10px;
     font-size: 1.4rem;
 `
 

@@ -1,48 +1,23 @@
-import * as actionTypes from '../constants/pokemonConstants';
-
-export const getPokemonsListReducer = (state = { pokemons:[] }, action) => {
-    switch (action.type) {
-        case actionTypes.GET_POKEMONS_REQUEST:
-            return {
-                loading: true,
-                pokemons: [],
-            }
-        case actionTypes.GET_POKEMONS_SUCCESS:
-            return {
-                loading: false,
-                pokemons: action.payload,
-            }
-        case actionTypes.GET_POKEMONS_FAIL:
-            return {
-                loading: false,
-                error: action.payload,
-            }
-        default:
-            return state;
-    }
+import * as actionTypes from "../constants/pokemonConstants";
+const intialState = {
+  pokemons: [],
 };
 
-export const getPokemonDetailsReducer = (state = { pokemon: {} }, action) => {
-    switch (action.type) {
-        case actionTypes.GET_POKEMON_DETAILS_REQUEST:
-            return {
-                loading: true,
-            }
-        case actionTypes.GET_POKEMON_DETAILS_SUCCESS:
-            return {
-                loading: false,
-                pokemon: action.payload,
-            }
-        case actionTypes.GET_POKEMON_DETAILS_FAIL:
-            return {
-                loading: false,
-                error: action.payload,
-            }
-        case actionTypes.GET_POKEMON_DETAILS_RESET:
-            return {
-                pokemon: {}
-            }
-        default:
-            return state;
+export const getPokemonsListReducer = (state = intialState, { type, payload }) => {
+  switch (type) {
+    case actionTypes.SET_POKEMONS_LIST:
+      return { ...state, pokemons: payload };
+    default:
+      return state;
+  }
+};
+
+export const getSelectedPokemonReducer = (state = {}, { type, payload }) => {
+    console.log(type);
+    switch (type) {
+      case actionTypes.SELECTED_POKEMON:
+        return { ...state, ...payload };
+      default:
+        return state;
     }
-}
+  };
